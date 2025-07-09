@@ -1,8 +1,8 @@
-import HashRing from 'hashring';
 import {SERVICES} from '../services.cofing';
+const HashRing = require('hashring');
 
 export class ConsistentHasher {
-    private ring : HashRing;
+    private ring : InstanceType<typeof HashRing>;
 
     constructor(){
         this.ring = new HashRing(SERVICES);
